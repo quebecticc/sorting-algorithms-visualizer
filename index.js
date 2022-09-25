@@ -8,7 +8,7 @@ let minRange = 1;
 let maxRange = slider.value;
 let numOfBars = slider.value;
 let heightFactor = 4;
-let speedFactor = 100;
+let speedFactor = 50;
 let unsorted_array = new Array(numOfBars);
 
 slider.addEventListener("input", function () {
@@ -63,7 +63,7 @@ randomize_array.addEventListener("click", function () {
 });
 
 function sleep(ms) {
-    return new Promise((resolve) => setTimeout(resolve, 0));
+    return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 async function bubbleSort(array) {
